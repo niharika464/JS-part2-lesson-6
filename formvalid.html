@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Enter Your Age</p>
+    <input id="id1" type="number" min="15" max="50" required>
+    <button onclick="myfunction()">OKAY</button>
+    <p id="para"></p>
+    <script>
+        function myfunction()
+        {
+            var inobj=document.getElementById("id1");
+            if(!inobj.checkValidity())
+        {
+            document.getElementById("para").innerHTML=inobj.validationMessage;
+        }
+        else
+        {
+            document.getElementById("para").innerHTML="NO ERROR..."
+        }
+    }
+    </script>
+</body>
+</html>
